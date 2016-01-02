@@ -14,7 +14,7 @@ Function Get-Settings {
 
         # Location where the files are kept
         $Settings = @{
-            "SaltRepo"    = "http://docs.saltstack.com/downloads/windows-deps"
+            "SaltRepo"    = "https://repo.saltstack.com/windows/dependencies"
             "SaltDir"     = "C:\salt"
             "PythonDir"   = "C:\Python27"
             "ScriptsDir"  = "C:\Python27\Scripts"
@@ -47,17 +47,21 @@ Function Get-Settings {
         $CommonPrograms = @{
             "Backports"  = "backports.ssl_match_hostname-3.4.0.2.tar.gz"
             "Certifi"    = "certifi-2015.04.28-py2.py3-none-any.whl"
+            "DateUtil"   = "python_dateutil-2.4.2-py2.py3-none-any.whl"
             "Futures"    = "futures-3.0.3.tar.gz"
             "GnuGPG"     = "python-gnupg-0.3.7.tar.gz"
+            "ioloop"     = "ioloop-0.1a.tar.gz"
             "Jinja"      = "Jinja2-2.7.3-py27-none-any.whl"
             "MarkupSafe" = "MarkupSafe-0.23.tar.gz"
             "MsgPack"    = "msgpack-python-0.4.6.tar.gz"
-            "Pip"        = "get-pip-7.0.3.py"
-            "Pip-Wheel"  = "pip-7.0.3-py2.py3-none-any.whl"
+            "Pip"        = "get-pip-7.1.0.py"
+            "Pip-Wheel"  = "pip-7.1.0-py2.py3-none-any.whl"
+            "PyMySQL"    = "PyMySQL-0.6.6-py2.py3-none-any.whl"
             "PyYAML"     = "PyYAML-3.11.tar.gz"
             "Requests"   = "requests-2.5.3-py2.py3-none-any.whl"
             "SetupTools" = "setuptools-17.0-py2.py3-none-any.whl"
-            "Tornado"    = "tornado-4.2.tar.gz"
+            "Six"        = "six-1.9.0-py2.py3-none-any.whl"
+            "Tornado"    = "tornado-4.2.1.tar.gz"
             "Wheel"      = "wheel-0.24.0-py2.py3-none-any.whl"
             "WMI"        = "WMI-1.4.9-py2-none-any.whl"
         }
@@ -65,21 +69,21 @@ Function Get-Settings {
 
         # Filenames for 64 bit Windows
         $64bitPrograms = @{
-            "PSUtil"     = "psutil-2.2.1-cp27-none-win_amd64.whl"
+            "PSUtil"     = "psutil-3.1.1-cp27-none-win_amd64.whl"
             "PyCrypto"   = "pycrypto-2.6.1-cp27-none-win_amd64.whl"
-            "Python"     = "python-2.7.8.amd64.msi"
+            "Python"     = "python-2.7.10.amd64.msi"
             "PyWin"      = "pypiwin32-219-cp27-none-win_amd64.whl"
-            "PyZMQ"      = "pyzmq-14.6.0-cp27-none-win_amd64.whl"
+            "PyZMQ"      = "pyzmq-14.7.0-cp27-none-win_amd64.whl"
         }
         $ini.Add("64bitPrograms", $64bitPrograms)
 
         # Filenames for 32 bit Windows
         $32bitPrograms = @{
-            "PSUtil"     = "psutil-2.2.1-cp27-none-win32.whl"
+            "PSUtil"     = "psutil-3.1.1-cp27-none-win32.whl"
             "PyCrypto"   = "pycrypto-2.6.1-cp27-none-win32.whl"
-            "Python"     = "python-2.7.8.msi"
+            "Python"     = "python-2.7.10.msi"
             "PyWin"      = "pypiwin32-219-cp27-none-win32.whl"
-            "PyZMQ"      = "pyzmq-14.6.0-cp27-none-win32.whl"
+            "PyZMQ"      = "pyzmq-14.7.0-cp27-none-win32.whl"
         }
         $ini.Add("32bitPrograms", $32bitPrograms)
 
